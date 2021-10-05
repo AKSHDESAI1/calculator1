@@ -1,0 +1,57 @@
+<!-- Making a Simple Calculator using Basic javascript -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | javascript</title>
+</head>
+
+<body>
+    <h1 style="color: blue;" align='center'>Calculator</h1>
+
+    <input type="text" id="input1">
+    <select name="" id="option1">
+        <option value="plus1">Plus</option>
+        <option value="minus1">Minus</option>
+        <option value="multiplication1">Multiplication</option>
+        <option value="division1">Division</option>
+    </select>
+    <input type="text" id="input2">
+    <button type="submit" onclick="abc()">=</button>
+    <input type="text" id="output1">
+</body>
+
+<script>
+    function abc() {
+        let input1 = document.getElementById('input1').value;
+        let option1 = document.getElementById('option1').value;
+        let input2 = document.getElementById('input2').value;
+        let output1 = document.getElementById('output1').value;
+
+        input1 = Number(input1)
+        input2 = Number(input2)
+
+        console.log(input1);
+        console.log(option1);
+        console.log(input2);
+
+        if (option1 == 'plus1') {
+            alert(`The addition of ${input1} and ${input2} is ${input1 + input2}. `)
+        }
+        else if (option1 == 'minus1') {
+            alert(`The substraction of ${input1} and ${input2} is ${input1 - input2}. `)
+        }
+        else if (option1 == 'multiplication1') {
+            alert(`The multiplication of ${input1} and ${input2} is ${input1 * input2}. `)
+        }
+        else if (option1 == 'division1') {
+            alert(`The division of ${input1} and ${input2} is ${input1 / input2}. `)
+        }
+
+    }
+</script>
+
+</html>
